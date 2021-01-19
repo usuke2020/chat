@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+    <title>チャット</title>
+
+</head>
+<body>
+    <div class="cmt">
+     <form name="chat" id="chat" action="" method="POST">
+				<input type="text" name="name" id="name">
+				<br />
+        <textarea name="text" id="text"></textarea>
+        </form>
+        <input type="button" id="send" value="送信" onclick="clickButton()" />
+     
+    </div>
+
+<script>
+function clickButton(){
+			const ta1 = document.chat.name.value; 
+			const ta2 = document.chat.text.value;
+			document.getElementById("name_comment").textContent = ta1; 
+			document.getElementById("text_comment").textContent = ta2;
+}
+
+</script>
+
+    <p><span id="name_comment"></span></p>
+		<p><span id="text_comment"></span></p>
+</body>
+</html>
